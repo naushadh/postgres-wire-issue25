@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres:
+    image: tfb-postgres
+    build:
+      context: .
+      dockerfile: tfb-postgres.Dockerfile
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+    ports:
+      - 5432:5432
+    expose:
+      - 5432

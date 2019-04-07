@@ -1,0 +1,10 @@
+resolver: lts-13.15
+
+packages:
+- .
+
+extra-deps:
+- socket-0.8.2.0
+- socket-unix-0.2.0.0
+- git: https://github.com/postgres-haskell/postgres-wire.git
+  commit: fda5e3b70c3cc0bab8365b4b872991d50da0348c
